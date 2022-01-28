@@ -22,10 +22,15 @@ function App() {
   const handleAddClick = () => {
     setInputList([...inputList, { firstName: "", lastName: "" }]);
   };
+  
+  function addData(){
+    console.log("LORD sana gumana huhuh",inputList);
+  }
 
   return (
     <div className="App">
       <h3><a href="https://cluemediator.com">Clue Mediator</a></h3>
+      <input name="studentName" placeholder="Enter Student Name"></input>
       {inputList.map((x, i) => {
         return (
           <div className="box">
@@ -51,6 +56,7 @@ function App() {
           </div>
         );
       })}
+      <button onClick={addData}>Test</button>
       <div style={{ marginTop: 20 }}>{JSON.stringify(inputList)}</div>
     </div>
   );
